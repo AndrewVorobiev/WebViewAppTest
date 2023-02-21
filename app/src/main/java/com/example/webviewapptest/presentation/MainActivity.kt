@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        isLoadingWebView()
         if (savedInstanceState != null) {
             myWeb.loadUrl(GOOGLE_URL)
         }
