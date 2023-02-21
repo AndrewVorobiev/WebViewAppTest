@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">WebViewAppTest</string>
+    <string name="app_name">WebViewApp</string>
+    <string name="error_network">No connection to the Internet</string>
 </resources>
