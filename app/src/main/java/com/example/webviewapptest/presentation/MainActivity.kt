@@ -15,7 +15,13 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var networkStatus: NetworkStatus
     private lateinit var binding: ActivityMainBinding
-    private val myWeb: WebView by lazy { binding.webViewGoogle }
+    private val myWeb : WebView by lazy{
+        binding.webViewGoogle
+    }
+
+    companion object {
+        const val GOOGLE_URL = "https://www.google.com/"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState != null) {
             myWeb.loadUrl(GOOGLE_URL)
         }
-
+        isLoadingWebView()
     }
 
     private fun isLoadingWebView() {
@@ -73,8 +79,6 @@ class MainActivity : AppCompatActivity() {
         myWeb.restoreState(savedInstanceState)
     }
 
-    companion object {
-        const val GOOGLE_URL = "https://www.google.com/"
-    }
+
 }
 
